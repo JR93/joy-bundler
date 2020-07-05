@@ -13,7 +13,7 @@
   "scripts": {
     "lint": "xo",
     "test": "jest",
-    "release": "cross-env standard-version && git push --follow-tags origin master && npm publish --registry=https://www.npmjs.com/"
+    "release": "cross-env standard-version && git push --follow-tags origin master && npm publish --registry=https://registry.npmjs.org"
   },
   "xo": {
     "envs": [
