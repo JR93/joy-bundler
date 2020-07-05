@@ -1,0 +1,97 @@
+{
+  "name": "joy-bundler",
+  "version": "0.1.2",
+  "description": "基于 Rollup 的 Npm 包轻量级构建工具",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JR93/joy-bundler.git"
+  },
+  "license": "MIT",
+  "author": "JR93 <gjr_china@163.com>",
+  "main": "src/index.js",
+  "bin": "bin/cli.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "xo",
+    "test": "jest",
+    "release": "cross-env standard-version && git push --follow-tags origin master && npm publish"
+  },
+  "xo": {
+    "envs": [
+      "jest"
+    ],
+    "rules": {
+      "prefer-object-spread": "off",
+      "unicorn/filename-case": "off",
+      "no-unused-expressions": "off",
+      "no-await-in-loop": "off",
+      "capitalized-comments": 0,
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ]
+    },
+    "semicolon": false,
+    "space": 2
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/runtime": "^7.10.4",
+    "@rollup/plugin-babel": "^5.0.4",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "@rollup/plugin-url": "^5.0.1",
+    "autoprefixer": "^9.8.4",
+    "cac": "^6.0.0",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.14.1",
+    "ora": "^4.0.4",
+    "postcss": "^7.0.32",
+    "rollup": "^2.18.1",
+    "rollup-plugin-postcss": "^3.1.2",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-vue": "^5.1.9",
+    "stylus": "^0.54.7",
+    "terser": "^4.8.0",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.5",
+    "update-notifier": "^4.1.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "cross-env": "^6.0.3",
+    "husky": "^4.2.5",
+    "standard-version": "^8.0.0",
+    "xo": "^0.24.0"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        0,
+        "always",
+        "lowerCase"
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "cross-env-shell commitlint -e $GIT_PARAMS"
+    }
+  }
+}
