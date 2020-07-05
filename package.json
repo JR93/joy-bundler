@@ -10,9 +10,6 @@
   "author": "JR93 <gjr_china@163.com>",
   "main": "src/index.js",
   "bin": "bin/cli.js",
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "lint": "xo",
     "test": "jest",
