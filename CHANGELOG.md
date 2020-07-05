@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/JR93/joy-bundler/compare/v0.1.5...v0.1.6) (2020-07-05)
+
+
+### Bug Fixes
+
+* pkg config ([e7e7e1a](https://github.com/JR93/joy-bundler/commit/e7e7e1a5f4c097398ab4a6f81e7998d7c4f3baeb))
+* registry ([0d66dbe](https://github.com/JR93/joy-bundler/commit/0d66dbe17fe1e26cf6888a4664ee6cabef973f0c))
+
 ### [0.1.5](https://github.com/JR93/joy-bundler/compare/v0.1.4...v0.1.5) (2020-07-05)
 
 
